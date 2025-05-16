@@ -4,130 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>focus</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            height: 100vh;
-            width: 100vw;
-            background-image: url("image/light_bg.png");
-            background-size: 100% 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Poppins', sans-serif;
-        }
-        .main-section {
-            width: 800px;
-            height: auto;
-             margin-top: -150px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start; /* Üstten hizala */
-            gap: 40px;
-            padding: 20px;
-        }
-        
-        .timer-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px; /* Timer ve buton arası boşluk */
-        }
-        
-        #timer {
-            width: 300px;
-            height: 300px;
-            background-color: #FEF0D1;
-            border: 12px solid #75722E;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #75722E;
-            font-size: 65px;
-            flex-shrink: 0;
-        }
-        
-        #start {
-            padding: 10px 30px;
-            background-color: #B16745;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-        }
-        
-        #log-section {
-            display: flex;
-            flex-direction: column;
-            gap: 15px; /* Date ve log-list arası boşluk */
-        }
-        
-        #date {
-            text-align: center;
-            color: #B16745;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-        #log-list {
-            width: 410px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-            gap: 20px;
-            padding-right: 10px;
-            flex-shrink: 0;
-        }
-        
-        .log {
-            width: 100%;
-            height: 60px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #FFF8E1;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            font-weight: bold;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        
-        .log:nth-child(4n+1) { background-color: #75722D; }
-        .log:nth-child(4n+2) { background-color: #9D9749; }
-        .log:nth-child(4n+3) { background-color: #E2C75C; }
-        .log:nth-child(4n+4) { background-color: #B16745; }
-
-        /* Scrollbar stil */
-        #log-list::-webkit-scrollbar {
-            width: 8px;
-        }
-        #log-list::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        #log-list::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        #log-list::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--ikonlar için bağlantı-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-section">
+   <div class="profile-icon">
+    <i class='bx bx-user-circle'></i>
+  </div>
+    <main>
         <div class="timer-section">
             <div id="timer">
                 <p>45:00</p>
@@ -137,15 +21,15 @@
 
         <div id="log-section">
             <div id="date">July 10, 2023</div>
-            <div id="log-list">
-                <div class="log">1.</div>
-                <div class="log">2.</div>
-                <div class="log">3.</div>
-                <div class="log">4.</div>
-                <div class="log">5.</div>
-                <div class="log">6.</div>
-            </div>
+            <ul id="log-list">
+                <li class="log">1.</li>
+                <li class="log">2.</li>
+                <li class="log">3.</li>
+                <li class="log">4.</li>
+                <li class="log">5.</li>
+                <li class="log">6.</li>
+            </ul>
         </div>
-    </div>
+    </main>
 </body>
 </html>
