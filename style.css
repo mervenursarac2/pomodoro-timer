@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap'); /* kronometre fontu*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
 
         * {
             margin: 0;
@@ -20,11 +21,11 @@
             top: 20px;
             left: 30px;
             font-size: 2.5rem;
-            color: #B16745 ; 
+            color: #B16745; 
             cursor: pointer;
             z-index: 1000;
             transition: all 0.3s ease; 
-            }
+        }
 
         .profile-icon:hover {
             color: #75722E; 
@@ -33,10 +34,10 @@
         main {
             width: 800px;
             height: auto;
-             margin-top: -150px;
+            margin-top: -150px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start; /* Üstten hizala */
+            align-items: flex-start;
             gap: 40px;
             padding: 20px;
         }
@@ -45,12 +46,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px; /* Timer ve buton arası boşluk */
+            gap: 20px;
+        }
+        
+        #timer-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
         }
         
         #timer {
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
             background-color: #FEF0D1;
             border: 12px solid #75722E;
             border-radius: 50%;
@@ -59,7 +66,46 @@
             align-items: center;
             color: #75722E;
             font-size: 65px;
-            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        #circular-slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            cursor: pointer;
+        }
+        
+        #circular-slider-track {
+            fill: none;
+            stroke: rgba(117, 114, 46, 0.3);
+            stroke-width: 12px;
+            stroke-linecap: round;
+        }
+        
+        #circular-slider-progress {
+            fill: none;
+            stroke: #E2C75C;
+            stroke-width: 10px;
+            stroke-linecap: round;
+            stroke-dasharray: 879.2;
+            stroke-dashoffset: 879.2;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        
+        #circular-slider-thumb {
+            fill: #B16745;
+            stroke-width: 1px;
+            cursor: grab;
+        }
+        
+        #circular-slider-thumb:active {
+            cursor: grabbing;
         }
         
         #start {
@@ -72,6 +118,7 @@
             font-size: 18px;
             cursor: pointer;
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
         #start:hover {
             background-color: #E2C75C;
@@ -83,7 +130,7 @@
         #log-section {
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Date ve log-list arası boşluk */
+            gap: 15px;
         }
         
         #date {
@@ -124,7 +171,6 @@
         .log:nth-child(4n+3) { background-color: #E2C75C; }
         .log:nth-child(4n+4) { background-color: #B16745; }
 
-        /* Scrollbar stil */
         #log-list::-webkit-scrollbar {
             width: 8px;
         }
@@ -139,3 +185,4 @@
         #log-list::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+   
