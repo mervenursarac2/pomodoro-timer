@@ -1,5 +1,4 @@
-
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
 
         * {
             margin: 0;
@@ -175,14 +174,13 @@
             width: 8px;
         }
         #log-list::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            
             border-radius: 10px;
         }
         #log-list::-webkit-scrollbar-thumb {
-            background: #888;
+           
             border-radius: 10px;
         }
         #log-list::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
-   
